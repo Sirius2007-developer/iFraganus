@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'fonts.css';
 *{
   margin: 0;
@@ -398,4 +399,254 @@ padding: 30px 40px;
   border-radius: 15px;
   margin-top: 20px;
   margin-bottom: 15px;
+=======
+@import 'fonts.css';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial;
+  font-weight: 400;
+  list-style: none;
+}
+.container{
+  border: 1px solid black;
+  position: relative;
+}
+*::before,
+*::after{
+  font-family: 'icons';
+}
+.icon-sun::before{content: '\f185'; font-weight: 300;}
+.icon-moon::before{content: '\f186'; font-weight: 300;}
+.icon-trash::before{content: '\f2ed'; font-weight: 300;}
+.icon-add::before{content: '\f055'; font-weight: 300;}
+:root{
+  --bg: #fbf700;
+  --color-text: #010101;
+  --del-btn: #b10000;
+  --body-bg: #f2f2f2;
+  --icon-color-light: rgb(255, 255, 255);
+  --icon-color-dark: #000000;
+  --nav-bag:rgb(16, 16, 16);
+  --text-color:white;
+  
+}
+body{
+  background: var(--body-bg);
+}
+.navbar-container{
+  max-width: 1320px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar-logo img{
+  width: 150px;
+}
+.navbar-btn{
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5px;
+  border-radius: 30px;
+  border: 4px solid white;
+  font-size: 30px;
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+}
+.navbar-btn.light::before,
+.navbar-btn.dark::before{
+  width: 45px;
+  height: 45px;
+  background:white;
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  z-index: 1;
+  transition: left 0.3s;
+}
+.navbar-btn.light::before{
+  left: -1px;
+}
+.navbar-btn.dark::before{
+  left: 48px;
+}
+.navbar-btn span{
+  z-index: 2;
+}
+.navbar-btn .icon-sun{
+  color: var(--icon-color-light);
+}
+.navbar-btn .icon-moon{
+  color: var(--icon-color-light);
+}
+.menu{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 30px;
+  color: rgb(255, 247, 0);
+}
+.menu div{
+  width: 150px;
+  height: 30px;
+  border: 1px solid white;
+  text-align: center;
+
+border-radius: 20px;
+
+
+}
+/* content */
+.content{
+  display: none;
+}
+.navbar-bosh{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 120px;
+  background-color: var(--nav-bag);
+}
+.box{
+  color: var(--color-text);
+}
+.box1{
+  margin-top: 100px;
+  width: 100%;
+  line-height: 40px;
+  padding: 30px;
+  height: 330px;
+  color: gold;
+  border-radius: 15px;
+  background-color: #929292;
+}
+.box1 h2{
+  font-size: 45px;
+
+}
+.box1 p{
+  font-size: 20px;
+}
+.konsultatsiya{
+  margin-top: 100px;
+  color:rgb(7, 7, 7);
+  background-color: rgb(226, 216, 196);
+  border-radius: 15px;
+  padding: 35px;
+}
+.input{
+  width: 100%;
+  border-radius: 15px;
+  height: 40px;
+  padding-left: 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.konsultatsiya h4{
+  color: rgb(255, 251, 0);
+  font-size: 35px;
+}
+.btn{
+  text-align: center;
+  font-size: 25px ;
+  width: 100%;
+  background-color: rgb(143, 247, 102);
+  border-radius: 15px;
+}
+.sektion2 p{
+  margin-left: 50px;
+  color: wheat;
+}
+.sektion2{
+  height: 500px;
+  padding-left: 100px;
+  padding-top: 100px;
+  background-image: url(../img/bacground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  color: yellow;
+  margin-bottom: 50px;
+  position: relative;
+}
+.sektion3{
+  display: flex;
+  flex-wrap: wrap;
+}
+.sektion3 .row{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+.dark-top{
+  position: absolute;
+  background-color: rgba(0,0,0, .8);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.card img{
+width: 250px;
+}
+.card{
+  border-radius: 15px;
+  padding: 20px;
+  
+}
+.format{
+
+  color: var(--color-text);
+  text-align: center;
+}
+.sektion4{
+  text-align: center;
+}
+.sektion4 h1{
+  color: var(--color-text);
+}
+.markaz{
+  color: var(--color-text);
+}
+.video{
+  height: 400px;
+  width: 100%;
+}
+.img2{
+  width: 100%;
+  height: 330px;
+  margin-top: 100px;
+  border-radius: 15px;
+}
+.harita h1{
+  color: var(--color-text);
+  text-align: center;
+  margin: 30px 0;
+}
+.addres,.footer{
+  color: var(--color-text);
+}
+.addres img{
+  width: 400px;
+  height: 200px;
+}
+.footer img{
+  width: 150px;
+}
+.icon a{
+  font-size: 30px;
+  color: var(--color-text);
+}
+.qidirish{
+  width: 180px;
+  height: 40px;
+border-radius: 15px;
+>>>>>>> 1dd74bd578a2f318e0f5ac1153d83ef1957dbf82
 }

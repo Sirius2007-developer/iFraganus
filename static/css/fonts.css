@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face{
   font-family: 'icons';
   src: url('../fonts/icons/fa-light-300.ttf') format('truetype');
@@ -7,4 +8,15 @@
   font-family: 'icons';
   src: url('../fonts/icons/fa-solid-900.ttf') format('truetype');
   font-weight: 900;
+=======
+@font-face{
+  font-family: 'icons';
+  src: url('../fonts/icons/fa-light-300.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face{
+  font-family: 'icons';
+  src: url('../fonts/icons/fa-solid-900.ttf') format('truetype');
+  font-weight: 900;
+>>>>>>> 1dd74bd578a2f318e0f5ac1153d83ef1957dbf82
 }
