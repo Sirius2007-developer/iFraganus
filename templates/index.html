@@ -1,10 +1,390 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Hello, I'm Sirius!!!</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!--   Header  End  -->
+    <div class="sektion1" id="konsultatsiya">
+      <div class="row ">
+        <div class="col-12 col-lg-7 col-md-5">
+          <div id="carouselExampleFade" class="carousel slide">
+            <div class="carousel-inner">
+                {% for head in header %}
+              <div class="carousel-item active">
+                <div class="box1">
+                  <h2>{{head.title}}</h2>
+                  <p>{{head.bio}}</p>
+                </div>
+              </div>
+                {% endfor %}
+<!--              <div class="carousel-item">-->
+<!--                <div class="box1">-->
+<!--                  <h2> 6000 dan ortiq bitiruvchilar safiga qo‘shiling!</h2>-->
+<!--                  <p>Shu kunga qadar “Najot Ta'lim” 6000 dan ortiq muvaffaqiyatli bitiruvchilarga ta‘lim bergan.-->
+<!--                    Ularning 85-95 foizi doimiy tarzda ishli bo‘lib kelmoqda.</p>-->
+
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="carousel-item">-->
+<!--                <div class="box1">-->
+<!--                  <h2> Kelajak kasblarini biz bilan o‘rganing!</h2>-->
+<!--                  <p>Hozirgi kunda istalgan biznes va startupning rivojlanishi uchun dasturchi, dizayner va marketolog-->
+<!--                    muhim mutaxassislardan biri hisoblanadi. Shuning uchun ham ushbu sohalarda talab doimiy tarzda o‘sib-->
+<!--                    bormoqda.</p>-->
+
+<!--                </div>-->
+<!--              </div>-->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 col-md-7">
+          <div class="konsultatsiya">
+            <h4>Bepul konsultatsiya</h4>
+            <p>Telefon raqamingizni yozib qoldiring, biz sizga qoʻngʻiroq qilamiz va birorta ham savolingiz javobsiz
+              qolmasligiga harakat qilamiz</p>
+            <input type="text" id="text" name="text" placeholder="Ismingiz" class="input"><br>
+            <input type="tel" id="tel" name="tel" placeholder="Raqamingiz" class="input">
+            <button class="btn">Sorov yuborish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--   Header  End  -->
+
+
+    <!--   Co-working  Start  -->
+    <div class="sektion2">
+      <div class="dark-top">
+        <div class="p-5">
+          <h1>--- KOVORKING</h1>
+          <p>Kovorking - bu zarur bo'lgan barcha texnika bilan jihozlangan xona, u <br> yerda o'quvchilarimiz qo'shimcha
+            mashq va uy vazifasini tajribali <br> ma'murlarning nazorati ostida bajarishlari mumkin. </p>
+        </div>
+      </div>
+    </div>
+    <!--   Co-working  End  -->
+
+
+    <!--   O'quv format  Start  -->
+    <div class="sektion3">
+      <h1 class="format" style="margin: 20px auto;">Qulay oquv formati</h1>
+      <div class="row">
+          {% for fo in format %}
+        <div class="col-12 col-lg-5 card">
+         <div class="d-flex mb-3">
+           <img src="{{fo.img.url}}" alt="" class="rasm">
+           <h4 style="margin-top: 60px; margin-left: 20px; color: gold; font-size: 30px;">{{fo.name}}</h4>
+         </div>
+          <p>{{fo.bio}}</p>
+        </div>
+          {% endfor %}
+      </div>
+    </div>
+    <!--   O'quv format  End  -->
+
+
+    <!--   Sayohat  Start  -->
+    <div class="sektion4">
+      <h1 style="margin: 50px 0;" class="sayohat">Markaz boylab sayohat</h1>
+    <div class="row">
+       <div class="col-6">
+        <video src="{% static 'img/videoIF.mp4' %}" controls poster="./img/bolalar.jpg" class="video"></video>
+       </div>
+       <div class="col-6 rasm5">
+        <img src="{% static 'img/markaz.jpg'%}" alt="">
+<!--         <img src="{% static 'img/markaz1.jpg' %}" alt="">-->
+       </div>
+    </div>
+    </div>
+    <!--   Sayohat  End  -->
+
+
+    <!--   Testimonial  Start  -->
+    <h1 style="text-align: center; margin: 30px 0;" class="box">O'quvchilarning fikrlari</h1>
+    <div class="row">
+      <div class="col-12">
+       
+     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner carusel">
+            <div class="carousel-item active">
+              <div class="corusel">
+                  {% for test in testimonial %}
+                  {% if test.id > 0 and test.id < 4 %}
+                <div class="box5" style="--clr: #009688">
+                    <div class="img-card1">
+                        <img src="{{test.img.url}}">
+                    </div>
+                    <div class="box6">
+                        <h2>{{test.name}}</h2>
+                        <p>{{test.comment}}</p>
+                        <a href="">{{test.job}}</a>
+                    </div>
+                </div>
+                  {% endif %}
+                  {% endfor %}
+            </div>
+            
+            </div>
+           
+            <div class="carousel-item ">
+              <div class="corusel">
+                  {% for test in testimonial %}
+                  {% if test.id > 3 and test.id < 7 %}
+                <div class="box5" style="--clr: #FF3E7F">
+                    <div class="img-card1">
+                        <img src="{{test.img.url}}">
+                    </div>
+                    <div class="box6">
+                        <h2>{{test.name}}</h2>
+                        <p>{{test.comment}}</p>
+                        <a href="">{{test.job}}</a>
+                    </div>
+                </div>
+                  {% endif %}
+                  {% endfor %}
+              </div>
+            </div>
+           
+            <div class="carousel-item ">
+              <div class="corusel">
+                  {% for test in testimonial %}
+                  {% if test.id > 6 and test.id < 10 %}
+                <div class="box5" style="--clr: #03A9F4">
+                    <div class="img-card1">
+                        <img src="{{test.img.url}}">
+                    </div>
+                    <div class="box6">
+                        <h2>{{test.name}}</h2>
+                        <p>{{test.comment}}</p>
+                        <a href="">{{test.job}}</a>
+                    </div>
+                </div>
+                  {% endif %}
+                  {% endfor %}
+
+            </div>
+            
+            </div>
+           
+          </div>
+        </div> 
+      </div>
+    </div>
+    <!--   Testimonial  End  -->
+
+    <!--   Consultation 2  Start  -->
+    <div class="sektion1">
+      <div class="row">
+        <div class="col-12 col-lg-7 col-md-5 rasm8">
+        <img src="{% static 'img/rasm2.jpg' %}" class="img2" alt="">
+        </div>
+        <div class="col-12 col-lg-5 col-md-7">
+          <div style="margin-top: 100px" class="konsultatsiya1">
+            <h4>Bepul konsultatsiya</h4>
+            <p>Telefon raqamingizni yozib qoldiring, biz sizga qoʻngʻiroq qilamiz va birorta ham savolingiz javobsiz
+              qolmasligiga harakat qilamiz</p>
+            <input type="text" id="text" name="text" placeholder="Ismingiz" class="input"><br>
+            <input type="tel" id="tel" name="tel" placeholder="Raqamingiz" value="+998" class="input">
+            <button class="btn">Sorov yuborish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--   Consultation 2  End  -->
+
+    <!--   Courses Start  -->
+    <div class="kurslar">
+      <div class="row flex-wrap d-flex justify-content-center">
+        <h2 style="color: black; margin: 20px 0;text-align: center;">Kurslar</h2>
+          {% for co in course %}
+        <div class="col-3 card" style="margin-bottom: 50px;">
+         <div class="d-flex" >
+           <img src="{{co.img.url}}" alt="">
+          <div class="m-2">
+            <b>{{co.name}}<br>
+               <small>{{co.month}}  oy</small></b>
+          </div>
+         </div>
+             <div style="width: 250px;" class="btn3" type="button">Ro'yhatdan otish</div>
+        </div>
+          {% endfor %}
+      </div>
+    </div>
+    <!--   Courses End  -->
+
+    <!--   Team Start  -->
+    <div class="sektion8">
+      <h1 style="text-align: center;margin: 30px 0;">O'qituvchilar</h1>
+      <div class="row d-flex ">
+          {% for t in team %}
+       <div class="col-3">
+        <div class="card" style="width: 300px;">
+           <img src="{{t.img.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+           <h3>{{t.name}}</h3>
+            <h4>{{t.rank}}</h4>
+          <p class="card-text">{{t.bio}}</p>
+        </div>
+        </div>
+       </div>
+          {% endfor %}
+      </div>
+    </div>
+    <!--   Team End  -->
+
+    <!--   Register Start  -->
+    <div class="sektion5">
+      <h1>Yaqin orada ochiladigan kurslarimizga yoziling</h1>
+      <p class="p">Har bir kurs boshlanishdan oldin tanishtiruv dars bo‘lib o‘tadi. Unda siz kurs bo‘yicha barcha ma‘lumotlarga <br> ega bo‘lasiz, o‘qituvchi bilan tanishib olasiz va kursga yozilishingiz mumkin.  </p>
+     <div class="row">
+      <div class="col-12 col-lg-7">
+        <select name="kurslar" id="kurslar" class="down">
+          <option value="1">SMM</option>
+          <option value="2">Grafik dizayn (Bootcamp)</option>
+          <option value="3">Java (standard)</option>
+          <option value="4">Pyton (standard)</option>
+          <option value="5">React (standard) </option>
+          <option value="5">dasturlash foundation (bootcamp) </option>
+          <option value="5">Node.js ()standard</option>
+        </select>
+       <div class="d-flex ">
+         <div class="bosh-div m-0 mt-3">
+           <h5 style="margin-bottom: 25px;">Guruh boshlanadigan sana tanlash</h5>
+           <form>
+           <div class="radio">
+             <label for="radio">13.02.2024</label>
+             <input type="radio" name="radio" id="radio">
+           </div>
+           <div class="radio">
+             <label for="radio">13.02.2024</label>
+             <input type="radio" name="radio" id="radio">
+           </div>
+           <div class="radio">
+             <label for="radio">13.02.2024</label>
+             <input type="radio" name="radio" id="radio">
+           </div>
+           <div class="radio">
+             <label for="radio">13.02.2024</label>
+             <input type="radio" name="radio" id="radio">
+           </div>
+         </form>
+         </div>
+         <div class="bosh-div">
+           <h5 style="margin-bottom: 25px;">Guruh boshlanadigan vaqt tanlash</h5>
+           <form>
+           <div class="radio">
+             <label for="radio">12:00</label>
+             <input type="radio" name="radio" id="radio">
+           </div>
+           <div class="radio">
+             <label for="radio">12:00</label>
+             <input type="radio" name="radio" id="radio">
+           </div>
+           <div class="radio">
+             <label for="radio">12:00</label>
+             <input type="radio" name="radio" id="radio">
+           </div>
+           <div class="radio">
+             <label for="radio">12:00</label>
+             <input type="radio" name="radio" id="radio">
+           </div>
+         </form>
+         </div>
+       </div>
+      </div>
+      <div class="col-12 col-lg-5 royxat">
+        <h4 style="margin-bottom: 30px;"><b>Royxatdan otish uchun formani toldiring</b> </h4>
+        <input type="text" id="text" name="text" placeholder="Ismingiz" class="input1"><br>
+        <input type="tel" id="tel" name="tel" placeholder="Raqamingiz" value="+998" class="input1">
+        <button class="btn1 btn">Guruhga yozilish</button>
+      </div>
+     </div>
+    </div>
+    <!--   Register End  -->
+
+    <!--   FAQ Start  -->
+    <div class="sektion9">
+        <h2 style="text-align: center; margin-top: 20px; font-size: 40px;"><strong>FAQ: iFraganus o'quv markaziga ta'lim bo'yicha beriladigan eng ommabop savollar</strong></h2>
+      <h3 style="text-align: center; font-size: 30px;"><strong>O’quv markazimiz konsultantlari bir-biriga o’xshash savollarga javob berishlariga to’g’ri keladi. Xizmat  ko’rsatish jarayonini tezlashtirish va soddalashtirish maqsadida biz ularning orasidan eng ko’p duch <br> kelinadiganlarini tanlab oldik.</strong></h3>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <strong><h4>Foundation kurslariga necha yoshdan ariza topshirish mumkin?</h4></strong>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <h5 style="color: gold;">Minimal yosh – 13. Shu bilan birga, barcha voyaga yetmaganlar uchun ularning ota-onalari yoki vasiylar to’g’risida ma’lumot taqdim etilishi shart.
+                  Foundation o’quv kursi to’lovlari va imtihonlarni topshirish bo’yicha barcha savollar bilan aynan ularga murojaat etiladi.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <strong><h4>Gibrid ta’lim tizimi nima degani?</h4></strong>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <h5 style="color: gold;">Mazkur ta’lim tizimining asosini har bir daraja va o’quv kursi uchun alohida onlayn platformadan foydalanish tashkil etadi.
+                  Gibrid ta’lim tizimining batafsil ta’rifi Instagramdagi sahifamizda eʼlon qilingan. Shuningdek, zarur hollarda markazimiz konsultantlari yordamidan foydalanishingiz mumkin.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+             <strong ><h4> Bepul xizmatlardan qanday foydalanish mumkin?</h4></strong>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <h5 style="color: gold;">Bepul sinov darsiga barcha xohlovchilar qatnashishlari mumkin. Buning uchun mazkur sahifaning yuqori qismidagi formadan foydalangan holda ro’yxatdan o’tish kifoya.
+                  Bepul co-working, qo’shimcha o’qituvchi bilan darslar, seminarlar, “speaking club”lar va yakshanbalik mashg’ulotlarga kelsak, ushbu bepul xizmatlar faqat bizning talabalar uchun mavjud.
+                  Ya’ni, asosiy ingliz tili o’quv kursi uchun pul to’lagan har bir kishi bu xizmatdan foydalanishi mumkin.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--   FAQ End  -->
+
+    <!--   Adress End  -->
+    <div class="harita">
+      <div class="row">
+            <h1>Ifraganus address</h1>
+        <div class="col-12 col-md-12 col-lg-6">
+            <iframe class="harita" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.747106605866!2d71.21153471056886!3d40.45873395296421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb035f19d19573%3A0xa47266bc196fa8a6!2siFraganus%20IT%20%26%20Design%20Group!5e0!3m2!1sru!2s!4v1708078744255!5m2!1sru!2s" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-12 col-md-12 col-lg-6 addres">
+          <h2>Farg'ona</h2>
+          <img src="{% static 'img/moljal.jpg' %}" alt="">
+          <hr>
+          <h5>Bog'dod tumani Serova shaharchasi, 3-uy</h5>
+          <hr>
+          <p>Moljal</p>
+          <h5>Avtoshoxbekat ro'parasidagi bino</h5>
+          <hr>
+          <p>Ish vaqti</p>
+          <h5>08:00 - 18:00</h5>
+          <hr>
+          <p>Telefon</p>
+          <h5>+998 90 925 63 08</h5>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <!--   Adress End  -->
+
+{% endblock content %}

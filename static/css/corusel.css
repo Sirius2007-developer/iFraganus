@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.corusel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+    
+}
+
+.corusel .box5 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: #FFF;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.corusel .box5:hover {
+    height: 400px;
+}
+
+.corusel .box5 .img-card1 {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.corusel .box5:hover .img-card1{
+    top: -100px;
+    scale: 0.75;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.corusel .box5 .img-card1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.corusel .box5 .box6 {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.corusel .box5:hover .box6 {
+    top: 130px;
+    height: 250px;
+}
+
+.corusel .box5 .box6 h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.corusel .box5 .box6 p {
+    color: #333;
+}
+
+.corusel .box5 .box6 a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: #FFF;
+    font-weight: 500;
+}
+
+.corusel .box5 .box6 a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    .corusel .box5 {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .corusel .box5 .img-card1 {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .corusel .box5 .box6 p {
+        font-size: 0.8rem;
+    }
+
+    .corusel .box5 .box6 a {
+        font-size: 0.9rem;
+    }
+}

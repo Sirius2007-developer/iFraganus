@@ -1,0 +1,401 @@
+@import 'fonts.css';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;  
+   font-family: "Libre Franklin", sans-serif;
+  font-weight: 400;
+  list-style: none;
+}
+.container{
+  position: relative;
+}
+*::before,
+*::after{
+  font-family: 'icons';
+}
+.icon-sun::before{content: '\f185'; font-weight: 300;}
+.icon-moon::before{content: '\f186'; font-weight: 300;}
+.icon-trash::before{content: '\f2ed'; font-weight: 300;}
+.icon-add::before{content: '\f055'; font-weight: 300;}
+:root{
+  --bg: #fbf700;
+  --color-text: #010101;
+  --del-btn: #b10000;
+  --body-bg: #f2f2f2;
+  --icon-color-light: rgb(255, 255, 255);
+  --icon-color-dark: #000000;
+  --nav-bag:rgb(16, 16, 16);
+  --text-color:white;
+  
+}
+.navbar-container{
+  max-width: 1320px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar-logo img{
+  width: 150px;
+}
+.navbar-btn{
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5px;
+  border-radius: 30px;
+  border: 4px solid white;
+  font-size: 30px;
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+}
+.navbar-btn.light::before,
+.navbar-btn.dark::before{
+  width: 45px;
+  height: 45px;
+  background:rgb(255, 255, 255);
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  z-index: 1;
+  transition: left 0.3s;
+}
+.navbar-btn.light::before{
+  left: -1px;
+}
+.navbar-btn.dark::before{
+  left: 48px;
+}
+.navbar-btn span{
+  z-index: 2;
+}
+.navbar-btn .icon-sun{
+  color: var(--icon-color-light);
+}
+.navbar-btn .icon-moon{
+  color: var(--icon-color-light);
+}
+.menu{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.menu button{
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+}
+.menu div{
+  width: 150px;
+  height: 30px;
+  border: 1px solid white;
+  text-align: center;
+
+border-radius: 20px;
+
+
+}
+/* content */
+.content{
+  display: none;
+}
+.navbar-bosh{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 120px;
+  background-color: yellow;
+}
+.box{
+  color: var(--color-text);
+}
+.box1{
+  margin-top: 100px;
+  width: 100%;
+  line-height: 40px;
+  padding:40px 60px 40px 90px;
+  height: 360px;
+  color: rgb(74, 63, 2);
+  border-radius: 15px;
+  background-color: #e4daba;
+}
+.box1 h2{
+  font-size: 38px;
+  font-weight: 600;
+ color: rgb(74, 63, 2);
+}
+.box1 p{
+  font-size: 17px;
+}
+.konsultatsiya1,.konsultatsiya{
+  margin-top: 100px;
+  color:rgb(7, 7, 7);
+  background-color: rgb(226, 216, 196);
+  border-radius: 15px;
+  padding: 35px;
+  height: 360px;
+}
+.input{
+  width: 100%;
+  border-radius: 15px;
+  height: 40px;
+  padding-left: 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.konsultatsiya h4{
+  
+  font-size: 35px;
+}
+.btn{
+  text-align: center;
+  font-size: 25px ;
+  width: 100%;
+  background-color:gold;
+  border-radius: 15px;
+}
+.sektion2 p{
+  margin-left: 50px;
+  color: wheat;
+}
+.sektion2{
+  height: 500px;
+  padding-left: 100px;
+  padding-top: 100px;
+  background-image: url(../img/bacground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  color: yellow;
+  margin-bottom: 50px;
+  position: relative;
+}
+.sektion3{
+  display: flex;
+  flex-wrap: wrap;
+}
+.sektion3 .row{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+.dark-top{
+  position: absolute;
+  background-color: rgba(0,0,0, .8);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.card img{
+width: 250px;
+}
+.card{
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  
+}
+.card h4{
+  
+  font-family: "Kode Mono", monospace;
+}
+.format{
+
+  color: var(--color-text);
+  text-align: center;
+}
+.sektion4{
+  text-align: center;
+}
+.sektion4 h1{
+  color: var(--color-text);
+}
+.markaz{
+  color: var(--color-text);
+}
+.video{
+  height: 400px;
+  width: 100%;
+}
+.rasm8 img{
+  height: 360px;
+}
+.img2{
+  width: 100%;
+  height: 330px;
+  margin-top: 100px;
+  border-radius: 15px;
+}
+.harita h1{
+  color: var(--color-text);
+  text-align: center;
+  margin: 30px 0;
+}
+.addres,.footer{
+  color: var(--color-text);
+}
+.addres img{
+  width: 400px;
+  height: 200px;
+}
+.addres h5,h2 {
+  color: gold;
+}
+.footer img{
+  width: 150px;
+}
+.footer{
+  padding: 0 50px ;
+  padding-bottom: 20px;
+}
+.icon{
+  margin-top: 30px;
+}
+.icon a{
+  font-size: 30px;
+  color: var(--color-text);
+}
+.qidirish{
+  width: 180px;
+  height: 40px;
+border-radius: 15px;
+}
+.sektion5{
+  width: 100%;
+  background-image: url(../img/smartt-header-2-1284x428.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-right: 35px;
+  border-radius: 25px;
+  
+}
+.sektion5 h1, .p{
+  text-align: center;
+  margin-top: 30px; 
+}
+.down{
+
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(99, 92, 92);
+  line-height: 25px;
+  padding-left: 20px;
+}
+.radio{
+  border: 1px solid rgb(181, 171, 171);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgb(234, 233, 233);
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.bosh-div{
+  width: 400px;
+  border: 1px solid rgb(201, 197, 197);
+  padding: 25px;
+  border-radius: 15px;
+  padding-top: 25px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.input1{
+  width: 100%;
+  height: 70px;
+  padding-left: 20px;
+  border-radius: 15px ;
+  margin: 10px auto;
+  border: 1px solid rgb(206, 198, 198);
+}
+.btn1{
+  width: 100%;
+  margin-top: 30px;
+
+}
+.harita{
+  width: 100%;
+}
+.carusel{
+width: 100%;
+padding: 0 20px;
+border-radius: 15px;
+background-image: url(../img/yellow.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.royxat{
+border-radius: 15px;
+border: 1px solid rgb(143, 143, 143);
+padding: 30px 40px;
+
+}
+.rasm:hover{
+  transform: scale(1.1);
+}
+.rasm5 img{
+  width: 100%;
+  height: 400px;
+
+  display: block;
+}
+.rasm6{
+  width: 30px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.malumot{
+  padding-top: 100px;   
+  line-height: 30px;
+}
+.malumot h2{
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+.malumot h4{
+  color: #fbf700;
+}
+.sektion8 .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.col-3{
+  width: 300px;
+  margin-left: 30px;
+}
+.kurslar img{
+  width: 70px;
+  border-radius: 15px ;
+}
+.btn3{
+  width: 220px;
+  height: 50px;
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+.cardlar{
+  width: 200px;
+  border: 1px solid black;
+  padding: 30px;
+  margin-right: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}

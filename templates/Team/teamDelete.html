@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="margin-top:50px;">
+<h1 class="text-center">O'qituvchini o'chirish sahifasiga xush kelibsiz!</h1>
+<form method="post">{%csrf_token%}
+    <h2>{{format.name}} sarlavhali o'qituvchini o'chirishni xohlaysizmi?</h2>
+    <button type="submit" class="btn btn-danger ml-2">Tasdiqlayman</button>
+</form></div>
+{% endblock content %}
